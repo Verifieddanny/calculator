@@ -78,7 +78,7 @@ equalTo.addEventListener("click", function () {
   } else if (symbol === "-") {
     endpoint = firstNumber - secondNumber;
   } else {
-    endpoint = Number(firstNumber) + Number(secondNumber);
+    endpoint = parseInt(firstNumber) + parseInt(secondNumber);
   }
   result.innerHTML = endpoint;
   firstNumber = result.innerHTML;
