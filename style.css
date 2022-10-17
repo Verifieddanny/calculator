@@ -67,6 +67,7 @@ body.change2 {
   box-shadow: 0 0.5rem 2rem 0 rgba(255, 255, 255, 0.256);
   padding-bottom: 1rem;
   transition: 0.5s;
+  box-sizing: border-box;
 }
 
 .mainContainer.change {
@@ -78,16 +79,26 @@ body.change2 {
 .result {
   margin: 0;
   margin-top: 4rem;
-  height: 4rem;
-  width: 100%;
-  /* margin-bottom: 2rem; */
+  height: 4.5rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 1rem;
+  position: relative;
+  cursor: pointer;
   font-size: 5rem;
   transition: 0.5s;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-y: hidden;
 }
+.result::-webkit-scrollbar {
+  display: none;
+}
+
 .result,
 span {
   font-size: 4.5rem;
@@ -97,6 +108,7 @@ span {
   color: black;
   transition: 0.5s;
 }
+
 .operators {
   padding-left: 1rem;
   padding-right: 1rem;

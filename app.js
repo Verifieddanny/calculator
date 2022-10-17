@@ -43,18 +43,16 @@ for (const digit of numbers) {
 function getFirstDigit(input) {
   result.innerHTML = "";
   firstNumber += input;
-  //   if (input === ".") {
-  //     firstNumber += input;
-  //   }
   result.innerHTML = firstNumber;
-  firstNumber = Number(firstNumber);
+  firstNumber = firstNumber;
+  console.log(firstNumber, result.innerHTML);
 }
 
 function getSecondDigit(input) {
   if (firstNumber != "" && symbol != "") {
     secondNumber += input;
     result.innerHTML = secondNumber;
-    secondNumber = Number(secondNumber);
+    secondNumber = secondNumber;
   }
 }
 
@@ -78,7 +76,9 @@ equalTo.addEventListener("click", function () {
   } else if (symbol === "-") {
     endpoint = firstNumber - secondNumber;
   } else if (symbol === "+") {
-    endpoint = firstNumber + secondNumber;
+    let firstNumber2 = Number(firstNumber);
+    let secondNumber2 = Number(secondNumber);
+    endpoint = firstNumber2 + secondNumber2;
   }
   result.innerHTML = endpoint;
   firstNumber = result.innerHTML;
