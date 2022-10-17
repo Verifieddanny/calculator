@@ -47,14 +47,14 @@ function getFirstDigit(input) {
   //     firstNumber += input;
   //   }
   result.innerHTML = firstNumber;
-  firstNumber = firstNumber;
+  firstNumber = Number(firstNumber);
 }
 
 function getSecondDigit(input) {
   if (firstNumber != "" && symbol != "") {
     secondNumber += input;
     result.innerHTML = secondNumber;
-    secondNumber = secondNumber;
+    secondNumber = Number(secondNumber);
   }
 }
 
@@ -77,8 +77,9 @@ equalTo.addEventListener("click", function () {
     endpoint = firstNumber * secondNumber;
   } else if (symbol === "-") {
     endpoint = firstNumber - secondNumber;
-  } else {
-    endpoint = parseInt(firstNumber) + parseInt(secondNumber);
+  } else if (symbol === "+") {
+    endpoint = firstNumber + secondNumber;
+    console.log(typeof firstNumber, typeof secondNumber);
   }
   result.innerHTML = endpoint;
   firstNumber = result.innerHTML;
