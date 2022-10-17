@@ -79,7 +79,6 @@ equalTo.addEventListener("click", function () {
     endpoint = firstNumber - secondNumber;
   } else if (symbol === "+") {
     endpoint = firstNumber + secondNumber;
-    console.log(typeof firstNumber, typeof secondNumber);
   }
   result.innerHTML = endpoint;
   firstNumber = result.innerHTML;
