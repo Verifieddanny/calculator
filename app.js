@@ -1,15 +1,44 @@
 //color change interactivity
 const mode = document.querySelector(".mode");
+const mode1 = document.querySelector(".mode1");
+const mode2 = document.querySelector(".mode2");
 const body = document.querySelector("body");
 const mainCont = document.querySelector(".mainContainer");
 
 mode.addEventListener("click", function () {
-  mode.classList.toggle("dark");
-  body.classList.toggle("change");
-  mainCont.classList.toggle("change");
-  result.classList.toggle("dark");
+  // mode.classList.toggle("dark");
+  // body.classList.toggle("change");
+  // mainCont.classList.toggle("change");
+  // result.classList.toggle("dark");
+  if (
+    body.style.backgroundColor === `#fb4db8` ||
+    body.style.backgroundColor === `#1af606` ||
+    body.style.backgroundColor === `black`
+  ) {
+    body.style.backgroundColor = `white`;
+    mode.classList.add("dark");
+    result.classList.add("dark");
+    mainCont.style.backgroundColor = `white`;
+    mainCont.style.boxShadow = ` 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.256)`;
+  } else {
+    body.style.backgroundColor = `black`;
+    mainCont.style.backgroundColor = `black`;
+    mainCont.style.boxShadow = ` 0 0.5rem 2rem 0 rgba(255, 255, 255, 0.256)`;
+    mode.classList.remove("dark");
+    result.classList.remove("dark");
+  }
 });
 
+mode1.addEventListener("click", function () {
+  body.style.backgroundColor = `#fb4db8`;
+  mainCont.style.backgroundColor = `#fb4db8`;
+  mainCont.style.boxShadow = `0 0.5rem 2rem 0 #c7c7c7`;
+});
+mode2.addEventListener("click", function () {
+  body.style.backgroundColor = `#1af606`;
+  mainCont.style.backgroundColor = `#1af606`;
+  mainCont.style.boxShadow = `0 0.5rem 2rem 0 #c7c7c7`;
+});
 //calculator functionality
 const numbers = document.querySelectorAll(".numbers");
 const signs = document.querySelectorAll(".operate");
@@ -27,7 +56,7 @@ let symbol = "";
 let endpoint = 0;
 
 for (const digit of numbers) {
-  digit.addEventListener("click", (e) => {
+  digit.addEventListener("click", () => {
     let num = digit.innerHTML;
 
     if (isFirstNumber === false) {

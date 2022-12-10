@@ -40,6 +40,26 @@ body.change2 {
   cursor: pointer;
   transition: 0.5s;
 }
+.mode1 {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #db0c8c;
+  cursor: pointer;
+}
+.mode2 {
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #18ad0b;
+  cursor: pointer;
+}
 .mode:hover {
   box-shadow: 0 0.5rem 2rem 0 rgba(255, 255, 255, 0.82);
 }
